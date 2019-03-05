@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "npx babel src --out-dir dist",
-    "dev": "node ./build/dev"
+    "dev": "node ./build/dev",
+    "demo": "node ./src/index.js"
   },
   "author": "singlebyted",
   "license": "MIT",
@@ -20,5 +21,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "get-pixels": "^3.3.2"
+  },
+  "engines": {
+    "node": "10.15.0"
   }
 }

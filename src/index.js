@@ -17,9 +17,8 @@ function getCharMap() {
   }
   return map;
 }
-const CHAR_MAP = getCharMap('@', 'w', '#', '$', 'k', 'd', 't', 'j', 'i', '~', '.', ' ');
-// '@','#','$','=','*','!',';',':','~','-',',','.','&nbsp;'
-const MATRIX_BLOCK_PRECISION = 10;
+const CHAR_MAP = getCharMap('@', '#', '$', '=', '*', '!', ';', ':', '~', '-', ',', '.', ' ');
+const MATRIX_BLOCK_PRECISION = 6;
 
 function getGrayScale(r, g, b) {
   return ~~(0.3 * r + 0.59 * g + 0.11 * b);
@@ -36,7 +35,7 @@ function getMatrixAverageGrayScale(x, y, width, height, pixels) {
   return ~~(grayScaleAmount / (width * height));
 }
 
-getPixels(relativePath('test/test2.jpeg'), (err, pixels) => {
+getPixels(relativePath('demo/lenna.jpg'), (err, pixels) => {
   if (err) {
     return console.log('Bad image path');
   }
